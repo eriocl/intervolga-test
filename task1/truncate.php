@@ -8,7 +8,7 @@ function truncate(string $text, string $link): string
         return '';
     }
     if (mb_strlen($text) > 180) {
-            $spacePos = mb_strpos($text, ' ', 180);
+            $spacePos = mb_strpos($text, ' ', 179);
             $cuttedText = $spacePos ? mb_substr($text, 0, $spacePos) : $text;
     } else {
         $cuttedText = trim($text);
