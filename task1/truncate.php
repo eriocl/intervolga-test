@@ -11,7 +11,7 @@ function truncate(string $text, string $link): string
             $spacePos = mb_strpos($text, ' ', 180);
             $cuttedText = $spacePos ? mb_substr($text, 0, $spacePos) : $text;
     } else {
-        $cuttedText = $text;
+        $cuttedText = trim($text);
     }
     $words = explode(' ', $cuttedText);
     if (count($words) < 3) {
@@ -21,5 +21,5 @@ function truncate(string $text, string $link): string
     $restWords = array_slice($words, 0, count($words) - 2);
     $text = implode(' ', $restWords);
     $ref = implode(' ', $lastTwoWords);
-    return $text . ' ' . "<a href=\"https://www.google.ru/\">$ref...</a>";
+    return $text . ' ' . "<a href=\"$link\">$ref...</a>";
 }
