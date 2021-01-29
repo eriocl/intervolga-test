@@ -2,6 +2,12 @@
 
 namespace Intervolga\Task4;
 
+/**
+ * Считает количество пар последовательных элементов.
+ *
+ * @param array $arr
+ * @return int
+ */
 function getPair(array $arr): int
 {
     if (empty($arr)) {

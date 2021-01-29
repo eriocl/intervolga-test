@@ -2,7 +2,16 @@
 
 namespace Intervolga\Task2;
 
-function resizeImage($path, $sX, $sY, $quality)
+/**
+ * Масшатбирует изображение с заданным качеством и возвращает <image> с base64 закодированным изображением.
+ *
+ * @param string $path
+ * @param int $sX
+ * @param int $sY
+ * @param int $quality
+ * @return string
+ */
+function resizeImage(string $path, int $sX, int $sY, int $quality)
 {
     $imageType = getimagesize($path)['mime'];
     switch ($imageType) {

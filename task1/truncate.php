@@ -2,6 +2,13 @@
 
 namespace Intervolga\Task1;
 
+/**
+ * Обрезает строку до 180 символов и заменяет последние 2 слова ссылкой
+ *
+ * @param string $text
+ * @param string $link
+ * @return string
+ */
 function truncate(string $text, string $link): string
 {
     if (empty($text)) {

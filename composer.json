@@ -14,7 +14,10 @@
             "task1/truncate.php",
             "task2/banner.php",
             "task4/func.php"
-        ]
+        ],
+        "psr-4": {
+            "Intervolga\\Task5\\": "task5/class"
+        }
     },
     "require-dev": {
         "phpunit/phpunit": "^9.5",
